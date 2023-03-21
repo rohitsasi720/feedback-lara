@@ -16,5 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return ['Laravel' => app()->version()];
 });
+Route::post('/submit-form', 'FormController@store')->name('submit-form');
+
 
 require __DIR__.'/auth.php';
